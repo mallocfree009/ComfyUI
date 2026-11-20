@@ -165,8 +165,7 @@ class MiniMaxH3ImageToVideo(io.ComfyNode):
             images.append(img)
             keyframes.append({"resolved_frame_index": 0, "image": img})
         if last_frame is not None:
-            # follower: aspect-preserving cover-crop
-            img = _resize(last_frame[:1], width, height, "center")
+            img = _resize(last_frame[:1], width, height, "disabled")
             images.append(img)
             keyframes.append({"resolved_frame_index": frame_count - 1, "image": img})
 
