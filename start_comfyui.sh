@@ -19,8 +19,7 @@ if [[ ! -x "$SCRIPT_DIR/.venv/bin/python" ]]; then
     exit 1
 fi
 
-source "$SCRIPT_DIR/.venv/bin/activate"
-exec python main.py \
+exec "$SCRIPT_DIR/.venv/bin/python" main.py \
     --enable-manager \
     --models-directory "$MODEL_DIR" \
     --output-directory "$OUTPUT_DIR" \
